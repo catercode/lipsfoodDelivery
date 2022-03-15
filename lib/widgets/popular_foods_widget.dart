@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../animation/scale_route.dart';
+import '../pages/food_details_page.dart';
+
 class PopularFoodsWidget extends StatefulWidget {
   @override
   _PopularFoodsWidgetState createState() => _PopularFoodsWidgetState();
@@ -45,7 +48,7 @@ class PopularFoodTiles extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // Navigator.push(context, ScaleRoute(page: FoodDetailsPage()));
+        Navigator.push(context, ScaleRoute(page: FoodDetailsPage()));
       },
       child: Column(
         children: <Widget>[

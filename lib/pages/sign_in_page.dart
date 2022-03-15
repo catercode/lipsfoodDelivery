@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:lips_food_delivery/pages/sign_up_page.dart';
+
+import '../animation/scale_route.dart';
 
 class SignInPage extends StatefulWidget {
   @override
@@ -72,7 +74,7 @@ class _SignInPageState extends State<SignInPage> {
                       fillColor: const Color(0xFFF2F3F5),
                       hintStyle: TextStyle(
                           color: const Color(0xFF666666),
-                          fontFamily: defaultFontFamily,
+                          // fontFamily: defaultFontFamily,
                           fontSize: defaultFontSize),
                       hintText: "Phone Number",
                     ),
@@ -104,7 +106,7 @@ class _SignInPageState extends State<SignInPage> {
                       fillColor: const Color(0xFFF2F3F5),
                       hintStyle: TextStyle(
                         color: const Color(0xFF666666),
-                        fontFamily: defaultFontFamily,
+                        // fontFamily: defaultFontFamily,
                         fontSize: defaultFontSize,
                       ),
                       hintText: "Password",
@@ -119,7 +121,7 @@ class _SignInPageState extends State<SignInPage> {
                       "Forgot your password?",
                       style: TextStyle(
                         color: const Color(0xFF666666),
-                        fontFamily: defaultFontFamily,
+                        // fontFamily: defaultFontFamily,
                         fontSize: defaultFontSize,
                         fontStyle: FontStyle.normal,
                       ),
@@ -150,7 +152,7 @@ class _SignInPageState extends State<SignInPage> {
                         "Don't have an account? ",
                         style: TextStyle(
                           color: const Color(0xFF666666),
-                          fontFamily: defaultFontFamily,
+                          // fontFamily: defaultFontFamily,
                           fontSize: defaultFontSize,
                           fontStyle: FontStyle.normal,
                         ),
@@ -158,7 +160,7 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                     InkWell(
                       onTap: () => {
-                        // Navigator.push(context, ScaleRoute(page: SignUpPage()))
+                        Navigator.push(context, ScaleRoute(page: SignUpPage()))
                       },
                       child: Container(
                         child: Text(
@@ -189,7 +191,9 @@ class SignInButtonWidget extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(5.0)),
+        borderRadius: BorderRadius.all(
+          Radius.circular(5.0),
+        ),
         boxShadow: <BoxShadow>[
           BoxShadow(
             color: Color(0xFFfbab66),
@@ -228,14 +232,15 @@ class FacebookGoogleLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Column(
-      children: <Widget>[
+      child: Column(children: [
         Padding(
-          padding: const EdgeInsets.only(top: 10.0),
+          padding: const EdgeInsets.only(top: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+            children: [
               Container(
+                width: 100,
+                height: 1.0,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
                       colors: [
@@ -247,8 +252,6 @@ class FacebookGoogleLogin extends StatelessWidget {
                       stops: [0.0, 1.0],
                       tileMode: TileMode.clamp),
                 ),
-                width: 100.0,
-                height: 1.0,
               ),
               const Padding(
                 padding: EdgeInsets.only(left: 15.0, right: 15.0),
@@ -317,7 +320,7 @@ class FacebookGoogleLogin extends StatelessWidget {
             ),
           ],
         ),
-      ],
-    ));
+      ]),
+    );
   }
 }

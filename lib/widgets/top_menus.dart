@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../animation/scale_route.dart';
+import '../pages/food_details_page.dart';
+
 class TopMenus extends StatefulWidget {
   @override
   _TopMenusState createState() => _TopMenusState();
@@ -42,7 +45,9 @@ class TopMenuTiles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, ScaleRoute(page: FoodDetailsPage()));
+      },
       child: Column(
         children: <Widget>[
           Container(

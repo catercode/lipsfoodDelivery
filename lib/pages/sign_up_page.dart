@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:lips_food_delivery/pages/sign_in_page.dart';
+
+import '../animation/scale_route.dart';
 
 class SignUpPage extends StatelessWidget {
   @override
@@ -213,7 +216,7 @@ class SignUpPage extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {
-                        //  Navigator.push(context, ScaleRoute(page: SignInPage()));
+                        Navigator.push(context, ScaleRoute(page: SignInPage()));
                       },
                       child: Container(
                         child: Text(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:food_delivery_libs/animation/scale_route.dart';
 
+import '../animation/scale_route.dart';
 import 'food_order_page.dart';
 
 class FoodDetailsPage extends StatefulWidget {
@@ -32,7 +33,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   color: Color(0xFF3a3737),
                 ),
                 onPressed: () {
-                  //q Navigator.push(context, ScaleRoute(page: FoodOrderPage()));
+                  Navigator.push(context, ScaleRoute(page: FoodOrderPage()));
                 })
           ],
         ),
@@ -285,7 +286,7 @@ class AddToCartMenu extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              //  Navigator.push(context, ScaleRoute(page: FoodOrderPage()));
+              Navigator.push(context, ScaleRoute(page: FoodOrderPage()));
             },
             child: Container(
               width: 200.0,

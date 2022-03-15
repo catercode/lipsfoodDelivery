@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:lips_food_delivery/animation/scale_route.dart';
+
+import 'package:lips_food_delivery/pages/sign_in_page.dart';
 
 import '../widgets/best_food_widget.dart';
 import '../widgets/popular_foods_widget.dart';
@@ -32,7 +35,7 @@ class _HomePageState extends State<HomePage> {
                 color: Color(0xFF3a3737),
               ),
               onPressed: () {
-                //Navigator.push(context, ScaleRoute(page: SignInPage()));
+                Navigator.push(context, ScaleRoute(page: SignInPage()));
               })
         ],
         systemOverlayStyle: SystemUiOverlayStyle.dark,
